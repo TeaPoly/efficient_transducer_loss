@@ -6,3 +6,5 @@ Transducer loss utterance by utterance.
 # Reference
 
 - Section 3.1. Efficient encoderand prediction output combination from IMPROVING RNN TRANSDUCER MODELING FOR END-TO-END SPEECH RECOGNITION (https://arxiv.org/pdf/1909.12415.pdf) 
+
+- [HawkAaron/warp-transducer](https://github.com/HawkAaron/warp-transducer.git)
