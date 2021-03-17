@@ -20,10 +20,10 @@ def EfficientCommbine(enc, pred, enc_len, pred_len):
     Then we concatenate all zn instead of paralleling them, which means we convert z into a two-dimension tensor (􏰀Nn=1 Tn ∗ Un), D). 
 
     Args:
-        enc: A 3-D Tensor of floats. The dimensions should be (B, T, V),
-                     B is batch index, T is the time index, V is the encode units size.
-        pred: A 3-D Tensor of floats. The dimensions should be (B, U, V),
-                     B is batch index, U is the prediction network sequence length, V is the decode units size.
+        enc: A 3-D Tensor of floats. The dimensions should be (B, T, F),
+                     B is batch index, T is the time index, F is the encode units size.
+        pred: A 3-D Tensor of floats. The dimensions should be (B, U, F),
+                     B is batch index, U is the prediction network sequence length, F is the prediction network units size.
         enc_len: A 1-D Tensor of ints, the number of time steps
                        for each sequence in the minibatch.
         pred_len: A 1-D Tensor of ints, the length of each label
