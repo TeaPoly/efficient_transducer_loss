@@ -29,10 +29,9 @@ def EfficientCommbine(enc, pred, enc_len, pred_len):
         pred_len: A 1-D Tensor of ints, the length of each label
                        for each example in the minibatch.
     Returns:
-        A 2-D Tensor of floats.  The dimensions should be (Sum(T_i*U_i), V),
-                                 T is the time index, U is the prediction network sequence
-                                 length, and V indexes over activations for each
-                                 symbol in the alphabet.
+        A 2-D Tensor of floats.  The dimensions should be (Sum(T_i*U_i), F),
+                                 T_i is the time index of one sample, U_i is the prediction network sequence
+                                 length of one sample, and F is projection units of encoder and prediction.
     """
     def combination_with_index(enc, pred, enc_len, pred_len, index):
         t = enc_len[index]
